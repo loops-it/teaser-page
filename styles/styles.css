@@ -22,7 +22,7 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     overflow: hidden;
 }
 
@@ -31,9 +31,11 @@ body {
     height: auto;
     object-fit: cover;
 }
-.mobile-image{
+
+.mobile-image {
     display: none;
 }
+
 .overlay-content {
     position: absolute;
     top: 68%;
@@ -41,15 +43,6 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
-
-/* .overlay-content p {
-    font-size: 18px;
-    line-height: 1.5;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 500;
-    color: #ffffff;
-} */
 
 .countdown {
     display: flex;
@@ -61,13 +54,13 @@ body {
 
 .countdown div {
     background-color: rgba(0, 0, 0, 0.3);
-    padding: 15px 20px;
+    /* padding: 15px 20px; */
     border: 2px solid #05908B;
     border-radius: 25px;
     width: 130px;
     height: 130px;
     text-align: center;
-    backdrop-filter: blur(4px); 
+    backdrop-filter: blur(4px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -119,37 +112,42 @@ body {
 
 /* Mobile */
 @media only screen and (max-device-width: 480px) {
-    .web-image{
+    .web-image {
         display: none;
     }
-    .mobile-image{
+
+    .mobile-image {
         display: block !important;
     }
-   
 }
 
 /* Mobile and tab */
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
     .countdown div {
         width: 85px;
         height: 85px;
     }
+
     .countdown div span {
         font-size: 12px;
         color: #ffffff;
     }
+
     .footer .terms {
         width: 35%;
         font-size: 12px;
     }
+
     .footer {
         padding: 10px 25px;
     }
+
     .footer .social-icons .icon {
         font-size: 10px;
         width: 18px;
         height: 18px;
     }
+
     .countdown div span {
         display: block;
         font-size: 10px;
@@ -157,33 +155,87 @@ body {
         font-weight: 600;
         font-family: 'Oswald', sans-serif;
     }
+
     .countdown div span {
-        font-size: 35px;    
+        font-size: 35px;
     }
+
     .countdown {
         color: #ffffff;
     }
-    .countdown div {
-        padding: 0px;
-    }
+
     .image-section {
-        align-items: start; 
+        align-items: start;
         background-color: #05908B;
     }
+
     .overlay-content {
         position: absolute;
-        top: 70% !important;
+        top: 75% !important;
         text-align: center;
     }
-    
-}
-/* Tab */
-@media (min-width: 481px) and (max-width: 991px){
 
 }
+
 /* Large Tablet View */
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer .terms {
+        width: 22%;
+        font-size: 15px;
+    }
 
+    .footer .social-icons .icon {
+        font-size: 15px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .image-section {
+        align-items: start;
+        background-color: #05908B;
+    }
+
+    .countdown div {
+        width: 130px;
+        height: 130px;
+    }
+
+    .countdown div {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 15px 20px;
+    }
+
+    .countdown div span {
+        font-size: 50px;
+    }
+
+    .countdown {
+        font-size: 18px;
+    }
+
+    .countdown {
+        gap: 30px;
+    }
 }
 
+/* Tab -ipad pro */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .countdown div {
+        width: 160px;
+        height: 160px;
+    }
 
+    .countdown {
+        gap: 40px;
+        font-size: 25px;
+    }
+
+    .countdown div span {
+        font-size: 60px;
+    }
+
+    .footer .terms {
+        width: 22%;
+        font-size: 20px;
+    }
+}
